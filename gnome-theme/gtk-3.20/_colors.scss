@@ -1,11 +1,10 @@
-// When color definition differs for dark and light variant
-// it gets @if ed depending on $variant
+@import "../../variables";
 
 // Main definitions
-$base_color: #282a36;
-$text_color: #f8f8f2;
-$bg_color: #1e1f29;
-$fg_color: #f8f8f2;
+$base_color: $base_color;
+$text_color: $text_color;
+$bg_color: $background;
+$fg_color: $link_color;
 
 // Primary colors
 $lime: #50fa7a;
@@ -18,19 +17,21 @@ $cyan: #28a745;
 $blue: #13b1d5;
 $slider: #7b7bbd;
 
-$selected_fg_color: #f8f8f2;
-$selected_bg_color: #7b7bbd;
+$selected_fg_color: $selected_color;
+$selected_bg_color: $selected_bg;
+
 $selected_borders_color: darken($selected_bg_color, 10%);
-$borders_color: if($variant == "light", transparentize(rgb(156, 156, 156), 0.8), transparentize(black, 0.9));
-$borders_edge: if($variant == "light", transparentize(white, 0.8), transparentize(white, 0.9));
-$link_color: $blue;
+$borders_color: transparentize(black, 0.9);
+$borders_edge: transparentize(white, 0.9);
+
+//$link_color: $blue;
 $link_visited_color: transparentize($link_color, 0.5);
 $top_highlight: if($variant == "light", transparentize(white, 0.8), transparentize(white, 0.9));
 $bottom_highlight: if($variant == "light", transparentize(black, 0.8), transparentize(black, 0.9));
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $headerbar_color: $bg_color;
 $headerbar_fg_color: $text_color;
-$menu_color: if($variant == "light", $base_color, mix($bg_color, $base_color, 20%));
+$menu_color: mix($bg_color, $base_color, 20%);
 $popover_bg_color: $base_color;
 $popover_hover_color: lighten($bg_color, 12%);
 

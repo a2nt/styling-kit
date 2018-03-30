@@ -2,10 +2,27 @@
  * Theme-wide variables
  */
 
+/************       DARK       ************/
 /*   Cream  |   Aqua  |  Green  |   Red   */
 /*  #282828 | #2C2C36 | #2A2A2C | #2F353A */
 /*  #222222 | #23232D | #212122 | #2b3034 */
 /*  #191919 | #1D1D24 | #19191A | #262a2e */
 
+/* #7f7f7f  |         |         |         */
+/* #f8f8f2  |         |         |         */
+
 /*  #B9B384 | #77BABC | #63b97f | #ff7b5d */
 /*  #908B67 | #5B8E90 | #4B8B60 | #B35843 */
+
+/************        LIGHT     ************/
+
+// TO-DO: add light palette
+
+$background: #191919;
+$base_color: #232322;
+
+$text_color: #7f7f7f;
+$link_color: #f8f8f2;
+
+$selected_bg: #908B67;
+$selected_color: $background;

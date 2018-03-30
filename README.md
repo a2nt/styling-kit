@@ -2,6 +2,12 @@
 
 Style interface, mostly common web-sites, apps and etc 
 
+# Requirements
+node
+npm
+gulp
+inkscape
+
 # Supports
 
 ## Interfaces
