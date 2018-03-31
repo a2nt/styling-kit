@@ -3,6 +3,10 @@
 Style interface, mostly common web-sites, apps and etc in a common way.
 This kit allows to style OS interface, apps and websites with the same color palette.
 
+![screenshoot](https://raw.githubusercontent.com/a2nt/styling-kit/master/screenshot.png)
+
+At the screen shoot you can see Gnome Shell interface + styled website.
+
 # Requirements
 node
 npm
