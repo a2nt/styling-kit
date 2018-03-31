@@ -1,0 +1,9 @@
+// include global variables
+@import "../../../variables";
+
+/*
+ * Site specific variables based on global variables
+ */
+
+$base_background: $base_color;
+$text_color: $text_color;

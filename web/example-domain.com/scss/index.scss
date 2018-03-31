@@ -1,0 +1,9 @@
+// include variables
+@import "variables";
+
+/* Domain specific styling */
+
+html, body {
+    background: $base_background;
+    color: $text_color;
+}
