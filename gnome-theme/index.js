@@ -48,8 +48,8 @@ gulp.task('shell-style', function() {
     gulp.src(__dirname + '/gnome-shell/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist/gnome-theme/gnome-shell/'))
-        .pipe(exec('gsettings set org.gnome.desktop.interface gtk-theme "Ant-Dracula-Purple"'))
-        .pipe(exec('gsettings set org.gnome.desktop.wm.preferences theme "Ant-Dracula-Purple"'))
+        .pipe(exec('gsettings set org.gnome.desktop.interface gtk-theme "Default" && gsettings set org.gnome.desktop.interface gtk-theme "Ant-Dracula-Purple"'))
+        .pipe(exec('gsettings set org.gnome.desktop.wm.preferences theme "Default" && gsettings set org.gnome.desktop.wm.preferences theme "Ant-Dracula-Purple"'))
 });
 
 // Watch task

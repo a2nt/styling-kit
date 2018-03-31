@@ -1,17 +1,19 @@
-// When color definition differs for dark and light variant,
-// it gets @if ed depending on $variant
+@import "../../variables";
 
-$base_color: #282a36;
-$bg_color: #282a36;
-$fg_color: #fefefe;
+// Main definitions
+$base_color: $base_color;
+$text_color: $text_color;
+$bg_color: $background;
+$fg_color: $link_color;
 
 $red: #ff5555;
 $purple: #bd93f9;
 $cyan: #8be9fd;
 $lime: #50fa7a;
 
-$selected_fg_color: $fg_color;
-$selected_bg_color: #7b7bbd;
+$selected_fg_color: $selected_color;
+$selected_bg_color: $selected_bg;
+
 $selected_borders_color: darken($selected_bg_color, 10%);
 $borders_color: transparentize(#44475a, 0.6);
 $borders_edge: transparentize(white, 0.9);
