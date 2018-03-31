@@ -5,6 +5,9 @@ console.log('--------------------------------------------------\n');
 var gnome = require('./gnome-theme');
 gnome.start('default');
 
+var web = require('./web');
+web.start('default');
+
 console.log('\n--------------------------------------------------');
 console.log('Styling kit is ready!');
 console.log('##################################################\n\n\n');

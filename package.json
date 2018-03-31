@@ -21,5 +21,8 @@
         "gulp": "*",
         "gulp-exec": "*",
         "gulp-sass": "*"
+    },
+    "devDependencies": {
+        "gulp-clean-css": "^3.9.3"
     }
 }

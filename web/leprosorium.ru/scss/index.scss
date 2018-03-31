@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 a, input, select {
     transition: all 0.3s ease;
 }
@@ -34,7 +36,7 @@ html .b-calendar_month_days,
 }
 
 .l-content__subsite .l-content_main {
-    border-color: #232323;
+    border-color: $base_color;
 }
 
 html .l-content a.vote_button.vote_voted {

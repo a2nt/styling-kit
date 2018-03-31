@@ -1,6 +1,7 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     sass = require('gulp-sass'),
-    exec = require('gulp-exec');
+    exec = require('gulp-exec'),
+    cleanCSS = require('gulp-clean-css');
 
 console.log('Initializing GNOME theme ..');
 
@@ -31,10 +32,16 @@ gulp.task('styles', function() {
     // update css
     gulp.src(__dirname + '/gtk-3.0/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
         .pipe(gulp.dest('dist/gnome-theme/gtk-3.0/'))
 
     gulp.src(__dirname + '/gtk-3.20/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
         .pipe(gulp.dest('dist/gnome-theme/gtk-3.20/'))
         .pipe(exec('gsettings set org.gnome.desktop.interface gtk-theme "Default" && gsettings set org.gnome.desktop.interface gtk-theme "Ant-Dracula-Purple"'))
 });
@@ -47,6 +54,9 @@ gulp.task('shell-style', function() {
 
     gulp.src(__dirname + '/gnome-shell/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
         .pipe(gulp.dest('./dist/gnome-theme/gnome-shell/'))
         .pipe(exec('gsettings set org.gnome.desktop.interface gtk-theme "Default" && gsettings set org.gnome.desktop.interface gtk-theme "Ant-Dracula-Purple"'))
         .pipe(exec('gsettings set org.gnome.desktop.wm.preferences theme "Default" && gsettings set org.gnome.desktop.wm.preferences theme "Ant-Dracula-Purple"'))
