@@ -39,6 +39,20 @@
     color: $selected_bg;
 }
 
+::selection {
+    background: $selected_bg;
+
+    /* WebKit/Blink Browsers */
+    color: $selected_color;
+}
+
+::-moz-selection {
+    background: $selected_bg;
+
+    /* Gecko Browsers */
+    color: $selected_color;
+}
+
 a, input, select {
     transition: all 0.3s ease;
 }
@@ -472,6 +486,7 @@ html .b-controls_column__frame .b-column_inner {
     box-sizing: border-box;
 }
 
+input[type=radio], input[type=checkbox],
 video::-webkit-media-controls-panel,
 .b-new_post_miniform_yarrr,
 .b-cloud_toggle_button,
@@ -637,4 +652,17 @@ input[type="image"]:focus {
     &:focus {
         opacity: .5;
     }
+}
+
+.paginator span strong em {
+    background: $selected_bg !important;
+    color: $selected_color !important;
+}
+
+.b-notification-item_empty {
+    background: $background_alt;
+}
+
+button.b-button__gradient:before {
+    color: $background_alt;
 }
