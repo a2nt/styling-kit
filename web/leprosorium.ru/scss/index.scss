@@ -1,4 +1,43 @@
 @import "variables";
+@import "../../scrollbars";
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+
+    color: $selected_bg;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+
+    color: $selected_bg;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+
+    color: $selected_bg;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+
+    color: $selected_bg;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+
+    color: $selected_bg;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+
+    color: $selected_bg;
+}
 
 a, input, select {
     transition: all 0.3s ease;
@@ -7,6 +46,7 @@ a, input, select {
 html, body {
     height: auto !important;
     min-height: 100% !important;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
 }
 
 html .l-content .b-blog_nav_sort a.b-blog_nav_sort_link,
@@ -17,7 +57,7 @@ html .l-content .threshold_select_button,
 .b-subscriptions_aside_block .b-subscribe_button_text,
 .b-list_item_blog_controls .b-subscribe_button_text,
 .b-subdomain_aside_subscribe .b-subscribe_button_text {
-    color: #bfbfbf !important;
+    color: $link_color !important;
 }
 
 .b-calendar,
@@ -28,11 +68,11 @@ html .b-calendar_month_days,
 .b-cloud_inner,
 .b-slider_scale_icon:hover,
 .b-index_slider .js-feed_type_active {
-    background: #000 !important;
+    background: $background_alt !important;
 }
 
 .b-calendar {
-    border-color: #000;
+    border-color: $background;
 }
 
 .l-content__subsite .l-content_main {
@@ -40,7 +80,8 @@ html .b-calendar_month_days,
 }
 
 html .l-content a.vote_button.vote_voted {
-    background-color: #666 !important;
+    background-color: $selected_bg !important;
+    color: $selected_color !important;
 }
 
 html,
@@ -50,9 +91,9 @@ body,
 .l-content_wrapper,
 .b-user_data,
 .b-menu__profile {
-    background: #191919 !important;
-    color: #b9b484 !important;
-    border-color: #191919 !important;
+    background: $background !important;
+    color: $text_color !important;
+    border-color: $background !important;
 }
 
 .b-footer_left_col,
@@ -62,8 +103,14 @@ body,
 
 .b-user_friends a,
 .b-user_contacts a,
-a {
-    color: #bfbfbf;
+a,
+.post .ddi a {
+    color: $link_color;
+
+    &:hover,
+    &:focus {
+        color: $selected_bg;
+    }
 }
 
 a:hover,
@@ -76,7 +123,7 @@ a:active {
 }
 
 .b-header_nav_link {
-    color: #bfbfbf;
+    color: $link_color;
 }
 
 html .l-content a,
@@ -93,7 +140,7 @@ html .b-index_view_about,
 html .b-quick_search a,
 html .b-quick_search .b-quick_search_section_header_caption,
 html .b-quick_search .b-quick_search_section_header_caption:visited {
-    color: #bfbfbf !important;
+    color: $link_color !important;
 }
 
 .b-karma_button,
@@ -107,12 +154,12 @@ html .b-quick_search .b-quick_search_section_header_caption:visited {
 .b-subscribe_button_icon,
 .l-content_aside_subscriptions_top .b-subscriptions_aside_block,
 .b-load_more_posts_button {
-    border-color: #000 !important;
-    background: #000 !important;
+    border-color: $background_alt !important;
+    background: $background_alt !important;
 }
 
 .b-list_item h5 {
-    color: #bfbfbf;
+    color: $link_color;
 }
 
 .b-karma_button:hover,
@@ -122,7 +169,9 @@ html .b-quick_search .b-quick_search_section_header_caption:visited {
 .vote_button:hover,
 .vote_button:active,
 .b-karma_button.active {
-    background: #3e3e3e !important;
+    background: $selected_bg !important;
+    color: $selected_color !important;
+    opacity: 1 !important;
 }
 
 html .l-content,
@@ -135,12 +184,12 @@ html .l-content .b-elections_candidate_info_program,
 html .react .p-democracy,
 html .b-aside_president p,
 html .b-aside_imperial_blogs .b-stats {
-    color: #b9b484 !important;
+    color: $text_color !important;
 }
 
 html .l-content .b-aside_item,
 html .b-domain_description {
-    border-bottom-color: #2f2f2f !important;
+    border-bottom-color: $base_color !important;
 }
 
 html .b_users_table-subtitle,
@@ -161,7 +210,7 @@ html .b-elections_nomination,
 html .b-elections_candidates,
 html .b-elections_candidate_votes_counter,
 html .b-domain_popup {
-    background: #000 !important;
+    background: $background_alt !important;
 }
 
 html .b-votes_popup a,
@@ -175,13 +224,13 @@ html .b-blog_controls_elections_settings a,
 html .b-blog_controls_elections_settings input:checked + label,
 html .b-elections a,
 html .b-domain_popup a {
-    color: #bfbfbf !important;
+    color: $link_color !important;
 }
 
 .b-user_public_notes_list_next,
 .b-user_public_notes_list_previous,
 html .b-arrow {
-    background: #151515 !important;
+    background: $base_color !important;
 }
 
 html .b-arrow:hover,
@@ -207,7 +256,7 @@ a.b-arrow.b-arrow__prev:after {
 }
 
 .b-user_public_notes_list {
-    background: #000;
+    background: $background_alt;
 }
 
 .b-user_public_notes_list_next:after,
@@ -225,43 +274,43 @@ a.b-arrow.b-arrow__next:after {
 
 .b-notification-feed_layout_popup,
 html .b_users_table-cell:first-child {
-    border-color: #161616;
+    border-color: $base_color;
 }
 
 .b-notification-feed_content {
-    background: #191919 !important;
+    background: $background !important;
 }
 
 .b-notification-item {
-    color: #a5a176;
+    color: $selected_bg;
 }
 
 .b-notification-item__unread {
-    background: #000;
-    color: #a5a176;
+    background: $background;
+    color: $selected_bg;
 }
 
 .b-notification-item_mention_comment_text {
-    color: #a5a176;
+    color: $selected_bg;
 }
 
 .b-notification-unsubscriptions_popup a,
 .b-notification-feed a {
-    color: #bfbfbf;
+    color: $link_color;
 }
 
 .b-notification-feed__footer {
-    background: #292929;
+    background: $base_color;
 }
 
 .b-notification-feed__all-events,
 .b-notification-feed__mark-all {
-    color: #bfbfbf !important;
+    color: $link_color !important;
 }
 
 .b-popup_holder {
-    background: #000;
-    border-color: #000;
+    background: $background;
+    border-color: $background;
     box-shadow: none;
 }
 
@@ -272,8 +321,8 @@ html .b_users_table-cell:first-child {
 }
 
 .b-my_posts_feed_controls_navigation strong {
-    background: #000 !important;
-    color: #bfbfbf !important;
+    background: $background !important;
+    color: $link_color !important;
     border-radius: 4px;
 }
 
@@ -294,8 +343,8 @@ html .b-form_submit,
 html .b-latvian_access_checkbox i,
 .b-add_item__subscription,
 .b-inbox_write_link a {
-    background: #000 !important;
-    border-color: #000 !important;
+    background: $background !important;
+    border-color: $background !important;
 }
 
 .b-submit_button:hover,
@@ -306,31 +355,31 @@ html .b-latvian_access_checkbox i,
 }
 
 .b-inbox_write_link span {
-    color: #bfbfbf;
+    color: $link_color;
 }
 
 .b-settings_highlight_sample1,
 .highlight1 .new .c_i {
-    background-color: #292929 !important;
+    background-color: $base_color !important;
 }
 
 .b-settings_highlight_sample2,
 .highlight2 .new .c_i {
-    background-color: #3a372e !important;
+    background-color: $base_color !important;
 }
 
 .b-settings_highlight_sample3,
 .highlight3 .new .c_i {
-    background-color: #3c2d38 !important;
+    background-color: $base_color !important;
 }
 
 .l-wide_header,
 .b-user_block {
-    background: #000;
+    background: $background_alt;
 }
 
 .l-wide_header {
-    border-bottom: 1px solid #191919;
+    border-bottom: 1px solid $background;
 }
 
 input[type="search"],
@@ -339,9 +388,9 @@ input[type="password"],
 textarea,
 select,
 .b-vote_form .i-form_text_input {
-    background: #000 !important;
-    color: #b9b484 !important;
-    border: 1px solid #2f2f2f !important;
+    background: $background_alt !important;
+    color: $text_color !important;
+    border: 1px solid $base_color !important;
 }
 
 html .b-menu__buttons .b-menu_list_link.b-menu_list_link_active,
@@ -349,85 +398,22 @@ html .b-vertical_line,
 html .b-tabs_content_section,
 html .l-content .b-comments_controls,
 html .b-controls_column__frame .b-column_inner {
-    border-color: #2f2f2f !important;
+    border-color: $base_color !important;
 }
 
 .b-quick_search_full,
 .b-quick_search_container,
 .b-quick_search_section_header {
-    background: #000 !important;
-    border-color: #191919 !important;
+    background: $background !important;
+    border-color: $background !important;
 }
 
 .b-quick_search_item_active {
-    background: #191919 !important;
-}
-
-::-webkit-input-placeholder {
-    /* WebKit, Blink, Edge */
-
-    color: #888;
-}
-
-:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-
-    color: #888;
-    opacity: 1;
-}
-
-::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-
-    color: #888;
-    opacity: 1;
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-
-    color: #888;
-}
-
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-
-    color: #888;
-}
-
-::placeholder {
-    /* Most modern browsers support this now. */
-
-    color: #888;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    width: 10px;
-    -webkit-box-shadow: none;
-    background: #000;
-    box-shadow: none;
-    border-left: 1px solid #191919;
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    background: #888;
-    box-shadow: none;
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-    background: #888;
-    box-shadow: none;
+    background: $background !important;
 }
 
 .b-user_note:hover {
-    background: #000;
+    background: $background;
 }
 
 .react .p-democracy__container_grey,
@@ -438,16 +424,16 @@ html .b-controls_column__frame .b-column_inner {
 
 .b-sparja__title,
 .b-sparja td, .b-sparja th {
-    color: #bfbfbf;
+    color: $link_color;
 }
 
 .p-democracy__inbox {
-    background: #000;
-    border-color: #000;
+    background: $background;
+    border-color: $background;
 }
 
 .b-column.b-column_right_column {
-    border-color: #191919 !important;
+    border-color: $background !important;
 }
 
 .b-ranks_table_more,
@@ -455,8 +441,8 @@ html .b-controls_column__frame .b-column_inner {
 .b-fraud_replace_list_item_output,
 .b-fraud_replace_form,
 .b-menu__profile .b-menu_list_link_active {
-    background: #272727 !important;
-    background-color: #272727 !important;
+    background: $base_color !important;
+    background-color: $base_color !important;
 }
 
 .b-ranks_table th.b-active,
@@ -464,19 +450,19 @@ html .b-controls_column__frame .b-column_inner {
 .b-ranks_table th span,
 .b-ranks_about h3 {
     color: #b1b1b1 !important;
-    border-color: #191919 !important;
+    border-color: $background !important;
 }
 
 .l-content_aside {
     position: absolute;
     left: 0;
     top: 0;
-    background: #000;
+    background: $background_alt;
     margin-top: 0;
     width: 222px;
     margin-right: 21px;
-    border-right: 1px solid #303030;
-    border-bottom: 1px solid #303030;
+    border-right: 1px solid $base_color;
+    border-bottom: 1px solid $base_color;
     min-height: 100%;
 }
 
@@ -486,7 +472,14 @@ html .b-controls_column__frame .b-column_inner {
     box-sizing: border-box;
 }
 
-.b-gertruda img {
+video::-webkit-media-controls-panel,
+.b-new_post_miniform_yarrr,
+.b-cloud_toggle_button,
+.b-gertruda img,
+.b-comments_reply_block_yarrr,
+.b-svg-icon svg,
+.b-subdomain_aside_subscribe_expand i,
+.b-subdomain_aside_subscribe_expand svg {
     filter: invert(1);
 }
 
@@ -501,7 +494,7 @@ html .b-controls_column__frame .b-column_inner {
 }
 
 .paginator .scroll_trough {
-    background: #000 !important;
+    background: $background !important;
 }
 
 .l-content_aside_main .b-gertruda:before {
@@ -517,12 +510,12 @@ html .b-controls_column__frame .b-column_inner {
 .b-header_nav_notifications,
 .b-notification-item,
 .b-vote_form {
-    border-color: #303030 !important;
+    border-color: $base_color !important;
 }
 
 .l-footer {
-    border-top: 1px solid #303030;
-    background: #000 !important;
+    border-top: 1px solid $base_color;
+    background: $background_alt !important;
 }
 
 .b-comments_reply_block_yarrr:hover,
@@ -582,12 +575,12 @@ html .b-controls_column__frame .b-column_inner {
 }
 
 .b-i-user_block {
-    background: #191919;
+    background: $background;
 }
 
 .b-slider_scale_icon:hover .b-index_view_about,
 .b-notification-feed__loading-animation {
-    background: #000;
+    background: $background;
     width: 37px;
     height: 37px;
 }
@@ -604,7 +597,7 @@ input[type="image"]:focus {
 .b-trans_table th, .b-trans_table th.b-first_cell, .b-trans_table th.b-third_cell,
 .b-trans_table th.b-second_cell, .b-trans_table th.b-third_cell {
     background: none;
-    color: #b9b484;
+    color: $text_color;
 }
 
 .b-presidents_list td.b-main_cell, .b-elections_process td.b-main_cell,
@@ -617,7 +610,7 @@ input[type="image"]:focus {
 .b-section_title,
 .b-fraud_refuel_pay_button .b-button,
 .b-xaoc_form .b-button, .b-fraud_market .b-button, .b-fraud_quick .b-button {
-    color: #fff !important;
+    color: $link_color !important;
 }
 
 .b-login_navigation {
@@ -625,6 +618,23 @@ input[type="image"]:focus {
 }
 
 .b-inbox_controls {
-    background: #000 !important;
-    border-color: #000 !important;
+    background: $background !important;
+    border-color: $background !important;
+}
+
+.b-slider_scale_icon:hover .b-index_view_about {
+    background-color: $background_alt !important;
+    width: 10rem;
+    text-align: center;
+    left: auto;
+    right: 0;
+}
+
+.b-new_post_miniform_footer .b-file_uploader_button {
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+        opacity: .5;
+    }
 }
