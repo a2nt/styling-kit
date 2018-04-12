@@ -1,11 +1,14 @@
 # styling-kit
 
-Style interface, mostly common web-sites, apps and etc in a common way.
-This kit allows to style OS interface, apps and websites with the same color palette.
+This kit allows you to style OS interface, apps and websites with the same color palette.
 
 ![screenshoot](https://raw.githubusercontent.com/a2nt/styling-kit/master/screenshot.png)
 
-At the screen shoot you can see Gnome Shell interface + styled website.
+At the screen shoot you can see Gnome Shell interface with Papirus Icons (https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) + styled website.
+
+# How to use it
+Stylish extension allows you inject compiled styles into websites (https://userstyles.org/).
+Compiled gnome-theme can be used as gtk + gnome-theme.
 
 # Requirements
 node
@@ -34,8 +37,6 @@ gulp
 ## Web
 
 + leprosorium.ru
-
-# Development
 
 ## Getting started
 
