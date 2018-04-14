@@ -21,8 +21,9 @@ a.rubric,
 .b-header-inner__info a,
 .b-header__menu .b-header__menu-link:visited,
 .b-topic .b-text p a,
-.b-text a {
-    color: $link_color;
+.b-text a,
+.b-text a[href^="/tags/"] {
+    color: $link_color !important;
     transition: all 0.4s;
 }
 
@@ -80,6 +81,8 @@ a:visited {
     }
 }
 
+.item[data-partslug='video'] a:after,
+.b-longgrid-column .item__rubric-icon,
 .svg-icons__video-play,
 .b-header__logo,
 .b-header-main__logo-icon,
@@ -145,11 +148,21 @@ a:visited {
     margin-bottom: 3rem;
 }
 
+.plistaHeadline,
+.itemTitle {
+    color: $header_color !important;
+}
+
+.itemText,
 .news-item__description,
 .news-item__headline,
 .tech-page__clean_list li,
 .tech-page__paragraph {
     color: $text_color !important;
+}
+
+.plista_widget_belowArticle_4 {
+    border-color: $background_alt !important;
 }
 
 .b-page-feature {
@@ -171,6 +184,7 @@ a:visited {
     display: none;
 }
 
+.rnet_lenta_dzen,
 .b-adverts-sidebar {
     display: none !important;
 }
@@ -263,7 +277,6 @@ a:visited {
 
 .b-footer .b-layout,
 .b-grid-topic.news,
-.b-header,
 .b-inline-topics-box .topics .topic,
 .b-label,
 .b-rubric-topic,
@@ -281,6 +294,10 @@ a:visited {
 .b-top__viewport__item, ._b-special-offers .vitrina-premium,
 .b-top__header__controls .arrow_left, ._b-special-offers__header-controls .arrow_left {
     border-color: $background_alt !important;
+}
+
+.b-header {
+    border-color: darken($background_alt, 20%) !important;
 }
 
 .b-side-topics__header {

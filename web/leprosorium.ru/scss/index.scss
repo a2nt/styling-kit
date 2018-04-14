@@ -504,6 +504,11 @@ video::-webkit-media-controls-panel,
     filter: invert(0);
 }
 
+.b-votes_popup_arrow_bottom,
+.b-votes_popup_arrow_top {
+    filter: brightness(-100);
+}
+
 .paginator_go_to_page {
     background: none !important;
 }
