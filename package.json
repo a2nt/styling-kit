@@ -18,11 +18,11 @@
     },
     "homepage": "https://github.com/a2nt/styling-kit#readme",
     "dependencies": {
-        "gulp": "*",
-        "gulp-exec": "*",
-        "gulp-sass": "*"
+        "gulp": "^4.0.1",
+        "gulp-exec": "^3.0.2",
+        "gulp-sass": "^4.0.2"
     },
     "devDependencies": {
-        "gulp-clean-css": "^3.9.3"
+        "gulp-clean-css": "^3.10.0"
     }
 }
